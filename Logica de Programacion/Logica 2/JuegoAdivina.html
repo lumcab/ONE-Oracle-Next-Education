@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas();
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea();
+    }
+    alert("Juego para saber si adivinas un número de 0 a 10");
+    nombre = prompt("Escriba su nombre");
+    contador = 1;
+    imprimirTitulo("Juego de adivinar el número");
+    numerPensado = Math.round(Math.random() * 10);
+    while (contador <= 3) {
+        // convirtiendo a numeros con parseInt
+        // Importar datos con el usuario usando caja de texto
+        numeroLanzado = parseInt(prompt(nombre + ", de un numero del 0 al 10"));
+        if (numeroLanzado == numerPensado) {
+            alert("Felicidades " + nombre + ", adivinó.");
+            break
+        } else {
+            alert("Lo siento " + nombre + ", usted fallo.");
+            alert(" Intento numero " + contador);
+        } contador++
+    }alert("Fin del juego");
+    imprimir("El numero era el "+ numerPensado);
+</script>

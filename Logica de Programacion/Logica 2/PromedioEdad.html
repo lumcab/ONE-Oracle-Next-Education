@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas();
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea();
+    }
+
+    imprimirTitulo("Promedio de Edad");
+    miembrosfamilia = parseInt(prompt("Escriba el numero de miembros de su familia"));
+    iteracion = 1;
+    edadTotal = 0;
+    while (iteracion <= miembrosfamilia) {
+        edad = parseInt(prompt("Ingrese la edad del familiar" + iteracion));
+        iteracion++
+        edadTotal += edad
+    }
+    promedio = edadTotal / miembrosfamilia
+    imprimir("El promedio de edad de tu familia es " + promedio);
+
+</script>

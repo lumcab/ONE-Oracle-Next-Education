@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas()
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea()
+    }
+    function imc(peso, altura) {
+        imcl = peso / (altura * altura)
+        // Solo dos decimales
+        return imcf = imcl.toFixed(2);
+    }
+    imprimirTitulo("Programa para calcular el IMC de una persona")
+    // convirtiendo a numeros con parseInt
+    // Importar datos con el usuario usando caja de texto
+    nombre = prompt("Escriba su nombre")
+    peso = parseInt(prompt(nombre + ", cual su peso en Kg"));
+    altura = parseFloat(prompt(nombre + ", cual su altura en Metros"));
+    imc1 = imc(peso, altura);
+    imprimir(nombre + ", su indice de masa corporal es de " + imc1);
+    if (imc1 <= 30) {
+        if (imc1 <= 25) {
+            if (imc1 <= 18) {
+                imprimir("Usted tiene insuficiencia ponderal")
+            }else {
+                imprimir("su peso es normal, felicidades")
+            }
+        } else {
+            imprimir("Usted tiene sobre peso")
+        }
+    } else {
+        imprimir("Usted tiene obesidad")
+    }
+
+</script>

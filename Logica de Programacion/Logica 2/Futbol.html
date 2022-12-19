@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas()
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea()
+    }
+    imprimirTitulo("Programa para calcular los puntos de liga de futbol")
+    // convirtiendo a numeros con parseInt
+    victorias = parseInt(prompt("Informe la cantidad de victorias"));
+    empates = parseInt(prompt("Informe la cantidad de empates"));
+    puntosTotal = ((victorias * 3) + empates);
+    puntosPasado = parseInt(prompt("Informe la cantidad de puntos del año pasado"));
+    imprimir("El equipo tiene " + puntosTotal + " puntos en total");
+    if (puntosTotal >= puntosPasado) {
+        if (puntosTotal > puntosPasado) {
+            imprimir("El está mejor que el año pasado")
+        } else {
+            imprimir("El está igual que el año pasado")
+        }
+    } else {
+        imprimir("El está peor que el año pasado")
+    }
+
+</script>

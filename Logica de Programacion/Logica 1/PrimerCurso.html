@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE</h1>
+<br>
+<!-- comentario de HTML
+    <h1>PRACTICA DE HTML Y JavaScript ORACLE</h1>
+    <br>
+    Sera esto realmente un programa?, descubrelo <a href="https://es.wikipedia.org/wiki/HTML">aqui</a>
+    <br>
+    <br>
+    Ingresa <a href="https://es.wikipedia.org/wiki/JavaScript">aqui</a> para ver un verdadero lenguaje de programación
+<br>
+-->
+<script>
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltoDeLinea()
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea()
+    }
+    function saltarLineas() {
+        // saltando tres lineas
+        document.write("<br><br><br>");
+    }
+    //Escribiendo con JS
+    /* comentario de varias lineas
+    document.write("la edad de Miguel es...")
+    document.write("<br>")
+    document.write(30+8)
+    document.write("<br>","20"+"22")
+    document.write("<br>"+"<br>"+"<br>"+"<br>"+"<br>")
+    */
+    //Variables en JS
+    TablaDel = prompt("Escriba el numero de la tabla de multiplicar que desea ver")
+    imprimir("Tabla de multiplicar del " + TablaDel)
+    imprimir(TablaDel + " por 1 es " + TablaDel * 1);
+    imprimir(TablaDel + " por 2 es " + TablaDel * 2);
+    imprimir(TablaDel + " por 3 es " + TablaDel * 3);
+    imprimir(TablaDel + " por 4 es " + TablaDel * 4);
+    imprimir(TablaDel + " por 5 es " + TablaDel * 5);
+    imprimir(TablaDel + " por 6 es " + TablaDel * 6);
+    imprimir(TablaDel + " por 7 es " + TablaDel * 7);
+    imprimir(TablaDel + " por 8 es " + TablaDel * 8);
+    imprimir(TablaDel + " por 9 es " + TablaDel * 9);
+    imprimir(TablaDel + " por 10 es " + TablaDel * 10);
+    saltarLineas()
+    imprimirTitulo("Primer Problema en JS")
+    imprimir("<h3>¿Alcohol o gasolina?</h3>")
+    saltoDeLinea();
+    tanque = 40
+    gasolina = 480
+    eficiencia = gasolina / tanque
+    imprimir("La eficiencia con gasolina es de " + eficiencia);
+    alcohol = 300
+    eficiencia2 = alcohol / tanque
+    imprimir("La eficiencia con alcohol es de " + eficiencia2);
+    /*
+        imprimir("Probando las funcion salto de linea");
+        imprimir("Y la funcion imprimir");
+        imprimir("Saltando varias lineas");
+        saltarLineas();
+        imprimir("imprimiendo operaciones");
+        imprimir(4+5+19);
+        saltarLineas();
+        */
+    imprimirTitulo("Calculando Indice de masa corporal");
+    function imc(peso, altura) {
+        imcl = peso / (altura * altura)
+        // Solo dos decimales
+        return imcf = imcl.toFixed(2);
+    }
+    // Importar datos con el usuario usando caja de texto
+    nombre = prompt("Escriba su nombre")
+    peso = prompt(nombre + ", cual su peso en Kg")
+    altura = prompt(nombre + ", cual su altura en Metros")
+    imc1 = imc(peso, altura);
+    imprimir(nombre + ", su indice de masa corporal es de " + imc1);
+
+</script>

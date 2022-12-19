@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas();
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea();
+    }
+    imprimirTitulo("Numero de pares en un numero determinado");
+    numero = parseInt(prompt("Escriba el numero que desee saber cuantos pares tiene"));
+    pares = 0;
+    for (contador = 1; contador <= numero; contador += 1) {
+        if (contador % 2 == 0) {
+            pares++
+        }
+    }
+    imprimir("En el numero " + numero + " hay " + pares + " pares");
+    imprimirTitulo("FIN");
+</script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas();
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea();
+    }
+    imprimirTitulo("Imprimiendo estrallas * ");
+    for (lineas = 1; lineas <= 10; lineas += 1) {
+        for (columna = 1; columna <= 10; columna += 1) {
+            document.write("*");
+        }
+        saltoDeLinea();
+    }
+</script>

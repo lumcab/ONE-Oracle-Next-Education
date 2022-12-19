@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1>Practica de HTML Y JavaScript de ORACLE curso 2</h1>
+<script>
+    // Funciones
+    function saltoDeLinea() {
+        document.write("<br>");
+    }
+    function saltarLineas() {
+        // saltando dos lineas
+        document.write("<br><br>");
+    }
+    function imprimir(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<big>" + parametro + "</big>");
+        saltarLineas();
+    }
+    function imprimirTitulo(parametro) {
+        // imprime y salta la siguiente linea
+        document.write("<h2>" + parametro + "</h2>");
+        saltoDeLinea();
+    }
+    tabla = prompt("Escriba el numero de la tabla de multiplicar que desea ver");
+    contador = 1
+    imprimirTitulo("Tabla de multiplicar del " + tabla);
+    //con while
+    imprimir("Ciclo While")
+    while (contador <= 10) {
+        iteracion = tabla * contador;
+        imprimir(tabla + " X " + contador + " = " + iteracion);
+        contador++
+    }
+    //con for
+    imprimir("Ciclo For")
+</script>
