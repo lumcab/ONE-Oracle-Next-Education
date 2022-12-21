@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Practica de HTML Y JavaScript de ORACLE Curso 3</h1>
+    <!--solo debes colocar html:5 y tab para crear esta estructura -->
+    <h2>Practica Funciones y Canvas</h2>
+</body>
+
+</html>
+
+</html>
+<canvas width="600" height="600">
+</canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    function DibujarCuadrado(x, y, color) {
+        pincel.fillStyle = color;       //Verde
+        pincel.fillRect(x, y, 50, 50);    //funcion
+    }
+    function ancho(y, color) {
+        for (x = 0; x < 600; x += 50) {
+            DibujarCuadrado(x, y, color);
+        }
+    }
+    function alto(x, color) {
+        for (y = 0; y < 600; y += 50) {
+            DibujarCuadrado(x, y, color);
+        }
+    }
+    ancho(0, 'yellow');
+    ancho(50, 'yellow');
+    ancho(100, 'yellow');
+    ancho(150, 'yellow');
+    ancho(200, 'blue');
+    ancho(250, 'blue');
+    ancho(300, 'red');
+    ancho(350, 'red');
+
+
+</script>

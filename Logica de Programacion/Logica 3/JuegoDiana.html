@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Practica de HTML Y JavaScript de ORACLE Curso 3</h1>
+    <!--solo debes colocar html:5 y tab para crear esta estructura -->
+    <h2>Juego de la Diana</h2>
+</body>
+
+</html>
+<canvas width="400" height="400">
+</canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 400, 400);
+    var radio = 10;
+    var xAleatorio = 200;
+    var yAleatorio = 200;
+
+    function DibujarCirculo(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function disenharObjetivo(x, y) {
+        DibujarCirculo(x, y, radio + 20, 'red');
+        DibujarCirculo(x, y, radio + 10, 'white');
+        DibujarCirculo(x, y, radio, 'red');
+    }
+
+    function sortearPosition(maximo) {
+        return Math.floor(Math.random() * maximo);  // floor redondea para abajo
+    }
+
+    function limpiar() {
+        pincel.clearRect(0, 0, 400, 400);
+    }
+
+    function actualizar() {
+        limpiar();
+        xAleatorio = sortearPosition(400);
+        yAleatorio = sortearPosition(400);
+        disenharObjetivo(xAleatorio, yAleatorio);
+    }
+
+    function disparar(evento) {
+        var x = evento.pageX - pantalla.offsetLeft; //pos x
+        var y = evento.pageY - pantalla.offsetTop; //pos y
+        if ((x < xAleatorio + radio) && (x > xAleatorio - radio) && (y < yAleatorio + radio) && (y > yAleatorio - radio)) {
+            alert('Tiro certero');
+        }
+    }
+
+    setInterval(actualizar, 700);
+    pantalla.onclick = disparar;
+
+
+</script>

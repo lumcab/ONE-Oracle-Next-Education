@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Practica de HTML Y JavaScript de ORACLE Curso 3</h1>
+    <!--solo debes colocar html:5 y tab para crear esta estructura -->
+    <h2>Practica Funciones, Ciruclos y Canvas</h2>
+</body>
+
+</html>
+<canvas width="600" height="600">
+</canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 600);
+
+    function DibujarCirculo(x, y, radio, color) {
+        pincel.fillStyle = (color);
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * 3.14);
+        pincel.fill();
+    }
+    DibujarCirculo(300, 300, 50, 'red');
+    DibujarCirculo(400, 300, 50, 'black');
+    DibujarCirculo(200, 300, 50, 'orange');
+    DibujarCirculo(300, 200, 50, 'yellow');
+    DibujarCirculo(300, 400, 50, 'blue');
+
+</script>
