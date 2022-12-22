@@ -1,0 +1,19 @@
+cd ruta							# me lleva a la ruta especificada
+ls								# muestra los archivos en la carpeta
+git status						# muestra elestado de git en la pc
+git init						# inicia git para la carpeta en especifico
+git add <file>					# incluir en el monitoreo de git
+git add .						# para agregar toda la carpeta al monitoreo
+git rm --cached <file> 			# elimina un archivo del monitoreo
+git commit -m "mensaje"			# Crea un commit y el mensaje describe que cambio es
+
+#Parametros globales
+git config --global user.name "lumcab"
+git config --global user.email "lumcab@gmail.com"
+
+#parametros locales
+git config --local user.name "Tu nombre aquí"
+git config --local user.email "Tu@email.aqui”
+
+git log 						# Historial de git y sus commits 'se sale con :q'
+git log --oneline				# Historial de commits linea a linea 'se sale con :q'
