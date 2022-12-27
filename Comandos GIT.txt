@@ -18,19 +18,37 @@ git config --global user.email "lumcab@gmail.com"
 git config --local user.name "Tu nombre aquí"
 git config --local user.email "Tu@email.aqui”
 
-git log 						# Historial de git y sus commits 'se sale con :q'
-git log --oneline				# Historial de commits linea a linea 'se sale con :q'
+git log 						# Historial de git y sus commits 'se sale con q'
+git log --oneline				# Historial de commits linea a linea 'se sale con q'
 
 git init --bare                 # Inicia servidor remoto
+git remote                      # Enumera las conexiones remotas que tienes con otros repositorios.
 git remote add nombre-repositorio camino/del/repositorio # Agraga servidor a repositorio local
+git remote -v                   # Incluye la URL de cada conexión.
 git push nombre-servidor rama   # Sube la información al servidor -u si quieres que actualice al main automaticamente
 git pull nombre-servidor rama   # Descarga la información del servidor a local
 
-git log -p                      # Muestra que se modifico en un archivo :q salir de log
+git log -p                      # Muestra que se modifico en un archivo q salir de log
+git log --oneline               # Muestra que se modifico en una linea
+git log --graph                 # Muestra los commit en forma grafica
 git clone                       # Trae un repositorio de un servidor git
+git diff (commit1)..(commit2)   # Muestra la diferencia de commit1 hasta commit2, con log obtengo el nombre
+git diff                        # Solo se muestra si hay cambiops sin commit
 
 git branch -M main
 git push -u origin main
 
 git branch nombrerama           # Crea una nueva rama de trabajo
 git checkout nombrerama         # Pasa a trabajar a la rama mencionada
+git checkout -b nombrelista     # Crea una nueva rama y pasa a trabajar en ella el -b es como branch
+
+git checkout main
+git merge nombrelista           # Abre una consola donde guarda las ramas unificadas se sale con x
+
+git rebase nombrelista          # crea un commit unificando las lineas de rtabajo en el ultimo comint de checkout
+
+git restore nombrearchivo       # Deshacen modificaciones antes de agregarla
+git restore --staged nombrearchivo       # Deshacen modificaciones después de agregarlas, pero antes de commitearlas
+git revert nombrearchivo        # Deshacen modificaciones después de realizar el commit
+
+git tagh -a nombreparametro     # Crea la version final de un software que se desarrolla
