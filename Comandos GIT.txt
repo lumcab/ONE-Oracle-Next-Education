@@ -1,5 +1,8 @@
+# Comandos básicos de navegación en la terminal
 cd ruta							# me lleva a la ruta especificada
-ls								# muestra los archivos en la carpeta
+ls  							# muestra los archivos en la carpeta
+
+# Comando básicos git
 git status						# muestra elestado de git en la pc
 git init						# inicia git para la carpeta en especifico
 git add <file>					# incluir en el monitoreo de git
@@ -17,3 +20,17 @@ git config --local user.email "Tu@email.aqui”
 
 git log 						# Historial de git y sus commits 'se sale con :q'
 git log --oneline				# Historial de commits linea a linea 'se sale con :q'
+
+git init --bare                 # Inicia servidor remoto
+git remote add nombre-repositorio camino/del/repositorio # Agraga servidor a repositorio local
+git push nombre-servidor rama   # Sube la información al servidor -u si quieres que actualice al main automaticamente
+git pull nombre-servidor rama   # Descarga la información del servidor a local
+
+git log -p                      # Muestra que se modifico en un archivo :q salir de log
+git clone                       # Trae un repositorio de un servidor git
+
+git branch -M main
+git push -u origin main
+
+git branch nombrerama           # Crea una nueva rama de trabajo
+git checkout nombrerama         # Pasa a trabajar a la rama mencionada
