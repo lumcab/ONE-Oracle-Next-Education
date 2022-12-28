@@ -6,3 +6,21 @@ html:5 tab          Inicia el codigo para html
 <strong></strong>   negrilla en el texto (fuerte o resaltado)
 <em></em>           cursiva en el texto (enfasis)
 <!-- Text-->        poner comentarios en html
+
+
+COLORES
+RR GG BB
+0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+0 es ausencia y F es maximo
+entonces para
+negro   #000000  ausencia de color
+blanco  #FFFFFF  con todos los colores al maximo
+rojo    #FF0000
+verde   #00FF00
+azul    #0000FF
+o tmabien rgb que va de 0 a 255
+negro   rgb(0,0,0)
+blanco  rgb(255,255,255)
+rojo    rgb(255,0,0)
+verde   rgb(0,255,0)
+azul    rgb(0,0,255)
