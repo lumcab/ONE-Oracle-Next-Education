@@ -1,0 +1,8 @@
+html:5 tab          Inicia el codigo para html
+<h1></h1)           hasta <h6> para titulos
+<p></p>             para parrafos
+<head></head>       para titulos en pestaña
+<body></body>       Cuerpo de la pagina
+<strong></strong>   negrilla en el texto (fuerte o resaltado)
+<em></em>           cursiva en el texto (enfasis)
+<!-- Text-->        poner comentarios en html
