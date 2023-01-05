@@ -52,3 +52,8 @@ git restore --staged nombrearchivo       # Deshacen modificaciones después de a
 git revert nombrearchivo        # Deshacen modificaciones después de realizar el commit
 
 git tagh -a nombreparametro     # Crea la version final de un software que se desarrolla
+
+
+Actualizar Programas en windows
+en cmd
+winget upgrade --all

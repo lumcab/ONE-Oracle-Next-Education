@@ -65,7 +65,6 @@ ul {
 .nav-main ul li a:hover {
     color: #28b1bc;
     border-bottom: 3px solid #28b1bc;
-
 }
 
 ul.nav-menu {
@@ -92,20 +91,43 @@ img.alineadoTextoImagen {
     vertical-align: middle;
 }
 
-#perfil {
-    margin: 20px;
-    width: 300px;
-    height: 300px;
+.accesos {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
 }
 
-p {
-    margin: 20px;
+.accesos li {
     display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 900px;
-    padding: 30px;
-    vertical-align: middle;
-    text-align: justify;
+    width: 30%;
+    margin-left: 25px;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 20px 20px;
+    border: 2px solid #cccccc;
+    border-radius: 30px;
+}
+
+.accesos li:hover {
+    color: #28b1bc;
+    border-color: #28b1bc;
+    font-size: 33px;
+}
+
+.accesos h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.accesos li:hover h2 {
+    font-size: 33px;
+}
+
+.accesos li p {
+    margin-top: 15px;
+    font-size: 25px;
 }
 
 footer {
