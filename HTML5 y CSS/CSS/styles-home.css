@@ -107,7 +107,10 @@ img.alineadoTextoImagen {
     vertical-align: middle;
     text-align: justify;
 }
-
+.explicando{
+    text-align: center;
+    font-size: 30px;
+}
 footer {
     background-image: url("../images/bg.jpg");
     text-align: center;
