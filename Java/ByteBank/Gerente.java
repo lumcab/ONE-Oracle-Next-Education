@@ -3,6 +3,12 @@ package ByteBank;
 //                  extiende de
 public class Gerente extends Funcionario implements Autenticable {
 
+    private AutenticacionUtil util;
+
+    public Gerente() {
+        this.util = new AutenticacionUtil();
+    }
+
     // Sobre-escritura de metodo
     public double getBonificacion() {
         System.out.println("EJECUTANDO DESDE GERENTE");
@@ -11,13 +17,12 @@ public class Gerente extends Funcionario implements Autenticable {
 
     @Override
     public void setClave(String clave) {
-        // TODO Auto-generated method stub
+        this.util.setClave(clave);
 
     }
 
     @Override
     public boolean iniciarSesion(String clave) {
-        // TODO Auto-generated method stub
-        return false;
+        return this.util.iniciarSesion(clave);
     }
 }

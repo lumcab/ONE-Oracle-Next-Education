@@ -43,6 +43,6 @@ public class Cliente implements Autenticable {
 
     @Override
     public void setClave(String clave) {
-        this.setClave(clave);
+        this.util.setClave(clave);
     }
 }
